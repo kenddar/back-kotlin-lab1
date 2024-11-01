@@ -1,3 +1,9 @@
+interface CashRegisterInterface {
+    fun exchangeRubToUsd(amount: Double): Double
+    fun exchangeUsdToRub(amount: Double): Double
+}
+
+
 class CashRegister(private val bank: Bank) : CashRegisterInterface {
 
     private var exchangeRate: Double = bank.getExchangeRate()

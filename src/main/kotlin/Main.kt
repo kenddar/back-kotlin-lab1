@@ -1,16 +1,3 @@
-interface BankInterface {
-    fun sendRub(amount: Double): Double
-    fun sendUsd(amount: Double): Double
-    fun receiveRub(amount: Double)
-    fun receiveUsd(amount: Double)
-    fun createCashRegister(): CashRegister
-}
-
-interface CashRegisterInterface {
-    fun exchangeRubToUsd(amount: Double): Double
-    fun exchangeUsdToRub(amount: Double): Double
-}
-
 fun main() {
 
     val bank = Bank(100000.0, 1000.0)
@@ -42,5 +29,4 @@ fun main() {
 
     println("Остаток рублей в банке: ${bank.getRubBalance()}")
     println("Остаток долларов в банке: ${bank.getUsdBalance()}")
-
 }
